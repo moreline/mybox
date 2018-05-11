@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>common-demo</title>
+    <link rel="stylesheet" href="../css/elementui.css">
+    <link rel="stylesheet" href="../css/ionicons.min.css">
+    <link rel="stylesheet" href="../css/common.css">
+
+    <script type="text/javascript" src="../js/vue.min.js"></script>
+    <script type="text/javascript" src="../js/elementui.js"></script>
+    <script type="text/javascript" src="../js/vue-resource.min.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+    <script type="text/javascript" src="../js/moment.js"></script>
+    <style>
+        .title {
+            font-size: 25px;
+        }
+
+        .largeImg > img {
+            width: 50px;
+            height: 50px;
+            margin-right: 20px;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <ol>
+        <li>
+            <p class="title">
+                dz-submit-button 上传提交按钮
+            </p>
+            <el-form ref="demo-submit">
+                <el-form-item>
+                    <el-input v-model="input1"></el-input>
+                </el-form-item>
+            </el-form>
+            <dz-submit-button
+                    submit-url=""
+                    submit-method="GET"
+                    :submit-data="input1"
+                    :submit-handler="successHandler"
+                    submit-form-ref="demo-submit"
+                    :before-submit="beforeHandler"
+                    btn-text="我是文本内容"
+            ></dz-submit-button>
+        </li>
+        <li>
+            <p class="title">
+                dz-submit-button 用于yun上传
+            </p>
+            <dz-upload-files
+                    :mutiple="true"
+                    :max-count="5"
+                    tip="图片上传最大5M"
+                    :file-list.sync="fileList1"
+                    :size-limit="5120"
+                    :call-back-params="callBackParams"
+            ></dz-upload-files>
+        </li>
+        <li>
+            <p class="title">dz-upload-file-drag 文件拖拽上传</p>
+            <dz-upload-file-drag :mutiple="true"
+                                 tip="上传文件最大不超过5M"
+                                 :max-count="5"
+                                 :size-limit="5120"
+                                 :file-list.sync="fileList1"
+            ></dz-upload-file-drag>
+        </li>
+        <li>
+            <p class="title">所有的上传组件都是大同小异，写的时候如果出现问题产考到之前项目里用到的或者去官方文档看</p>
+        </li>
+        <li>
+            <p class="title">
+                dz-pager 分页控件
+            </p>
+            <dz-pager :pager="pager"></dz-pager>
+        </li>
+        <li>
+            <p class="title">
+                dz-pager-all 完整的分页控件
+            </p>
+            <dz-pager-all :pager="pager"></dz-pager-all>
+        </li>
+        <li>
+            <p class="title">
+                dz-sms-code-button 发送短信验证码控件
+            </p>
+            <el-input v-model="phone1" placeholder="手机号"></el-input>
+            <dz-sms-code-button code-url="" :mobile="phone1" :count-down="60"></dz-sms-code-button>
+        </li>
+        <li>
+            <p class="title">
+                dz-city-select 选择城市级联
+            </p>
+            <dz-city-select :city-id.sync="cityId"></dz-city-select>
+        </li>
+        <li>
+            <p class="title">
+                dz-grade-select 年级班级联级选择器
+            </p>
+            <dz-grade-select :grades-id.sync="gradeId" :classes-id.sync="classId"></dz-grade-select>
+        </li>
+        <li>
+            <p class="title">
+                dz-province-select 选择省份
+            </p>
+            <dz-province-select :province-id="provinceId"></dz-province-select>
+        </li>
+        <li>
+            <p class="title">
+                dz-time-picker 时间选择器
+            </p>
+            <dz-time-picker :step="step"
+                            :date.sync="date"
+            ></dz-time-picker>
+        </li>
+        <li>
+            <p class="title">
+                dz-date-picker 日期选择器，自动把绑定值转化为timestamp格式
+            </p>
+            <dz-date-picker :handler-change="timeChange" :date.sync="date"></dz-date-picker>
+        </li>
+        <li>
+            <p class="title">
+                dz-date-pickers 日期段选择器，自动把绑定值转化为timestamp格式
+            </p>
+            <dz-date-pickers :handler-change="timeChange" :date.sync="date"></dz-date-pickers>
+        </li>
+        <li>
+            <p class="title">
+                dz-datetime-picker 日期选择器带时分的 自动把绑定值转化为timestamp格式
+            </p>
+            <dz-datetime-picker :handler-change="timeChange" :date.sync="date"></dz-datetime-picker>
+        </li>
+        <li>
+            <p class="title">
+                dz-search-btn 搜索、重置按钮组件
+            </p>
+            <dz-search-btn search-data.sync='input1' url="url"></dz-search-btn>
+        </li>
+        <li>
+            <p class="title">
+                dz-count-down 倒计时工具：显示剩余时间
+            </p>
+            <dz-count-down :end-time="1524739337" end-text="已过期"></dz-count-down>
+        </li>
+        <li>
+            <p class="title">
+                v-enter @enter.native 适用于输入控件的回车事件处理
+            </p>
+        </li>
+        <li>
+            <p class="title">
+                <el-input placeholder="回车事件" v-model="input1" v-enter @enter.native="enterHandler"></el-input>
+            </p>
+        </li>
+        <li>
+            <p class="title">
+                dz-preview-img 图片点击放大
+            </p>
+            <dz-preview-img :img-list="imgList"></dz-preview-img>
+        </li>
+        <li>
+            <p class="title">dz.utils.foreach</p>
+            循环数组，对象,用法自己去看~~~~
+        </li>
+        <li>
+            <p class="title">
+                dz.utils.timestampToMText 时间戳转时间格式 精确到分 秒 天
+            </p>
+            {{formatterTimem(1524739337)}}(分) {{formatterTimes(1524739337)}}（秒） {{formatterTimemd(1524739337)}}(天)
+        </li>
+        <li>
+            <p class="title">dz.utils.notify右侧弹出提示不刷新 dz.utils.showRemindRefreshPage右侧弹出提示刷新页面</p>
+            <el-button @click="changeClick" type="success">点击不刷新</el-button>
+            <el-button @click="clickRefresh" type="success">点击刷新</el-button>
+        </li>
+        <li>
+            <p class="title">
+                dz.utils.message 上面弹出提示
+            </p>
+            <el-button @click="messageClick" type="success">点击上面弹出消息框</el-button>
+        </li>
+        <li>
+            <p class="title">其他的JS的方法不好展示了，就你们自己去看dz.utils里面的方法了</p>
+        </li>
+
+    </ol>
+
+</div>
+
+<script>
+    //接受后台数据的唯一入口
+    var pageData = {};
+    var vue = new Vue({
+        el: "#app",
+        data: function () {
+            return {
+                input1: '',
+                fileList1: [],
+                callBackParams: {classId: "7", handleType: "yunClass", schoolId: 1, superId: 0, teacherId: 85},
+                pager: {
+                    count: 50,
+                    currentPage: 1,
+                    pageSize: 10,
+                    url: 'url'
+                },
+                phone1: '',
+                cityId: '',
+                gradeId: '',
+                classId: '',
+                provinceId: '',
+                step: '00:10',
+                date: '',
+                imgList: ['../img/1.png', '../img/2.png', '../img/3.png', '../img/4.png'],
+                navListData: [{name: 1, path: '/'}, {name: 2, path: ''}]
+
+            }
+        },
+        methods: {
+            formatterTimem: function (val) {
+                return dz.utils.timestampToMText(val)
+            },
+            formatterTimes: function (val) {
+                return dz.utils.timestampToLongText(val)
+            },
+            formatterTimemd: function (val) {
+                return dz.utils.timestampToshortText(val)
+            },
+            successHandler: function () {
+                alert('我是成功回调')
+            },
+            beforeHandler: function () {
+                alert('我是提交前的操作，return 的值为true or false')
+                return true
+            },
+            timeChange: function (val) {
+                alert('我是改变时间之后的回调')
+            },
+            enterHandler: function () {
+                alert('我是回车事件')
+            },
+            changeClick: function () {
+                dz.utils.notify('success', '成功', '点击成功')
+            },
+            clickRefresh: function () {
+                dz.utils.showRemindRefreshPage(
+                    'success', '点击成功，2S后刷新页面'
+                )
+            },
+            messageClick: function () {
+                dz.utils.message('error', '嗨呀，失败了，好气哦')
+            },
+        }
+    })
+</script>
+</body>
+</html>

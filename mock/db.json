@@ -1,0 +1,1367 @@
+{
+    "initPage": {
+        "message": "执行成功",
+        "code": 0
+    },
+    "getUserInfo": {
+        "message": "执行成功",
+        "code": 0
+    },
+    "getSchoolList": {
+        "message": "getSchoolList-执行成功",
+        "code": 0,
+        "content": {
+            "pager": {
+                "count": 100,
+                "currentPage": 2,
+                "pageSize": 20,
+                "url": "xxx.com"
+            },
+            "list": [
+                {
+                    "id": "100",
+                    "code": "学校代码-NKMS",
+                    "schoolName": "南开小学",
+                    "higherSchool": "上级学校-南开中学",
+                    "nameInEn": "nankai primary school",
+
+                    "addr": "重庆市xx区",
+                    "postCode": "400101",
+                    "regionCode": "学校区划码-0579",
+                    "bornDate": "2017-12-12",
+                    "celebrateDate": "2017-12-12",
+
+                    "schoolType": "2",
+                    "authority": "地级教育部门",
+                    "corporateNo": "JCTB020120",
+                    "corporateLicense": "FR165132",
+                    "headMasterNo": "XZ026",
+                    "schoolTypeTxt": "公办",
+                    "headMasterName": "李太白",
+                    "partyLeaderNo": "2001",
+                    "organizationCode": "932185476",
+                    "tel": "0591-12345678",
+                    "fax": "6800000",
+
+                    "email": "xxx@163.com",
+                    "homepage": "http://111.com",
+                    "history": "历史沿革",
+                    "schoolHost": "2",
+                    "higherAuthority": "同安区教育局",
+
+                    "cityType": "主城区",
+                    "economyType": "非贫困",
+                    "minzuType": "非民族自治县",
+                    "primarySchCourse": "6年",
+                    "primarySchAge": "7周岁",
+
+                    "juniorMidSchCourse": "3年",
+                    "juniorMidSchAge": "13",
+                    "seniorMidSchCourse": "3年",
+                    "firstLanguage": "汉语",
+                    "secondLanguage": "en",
+
+                    "studentArea": "20公里",
+                    "note": "note-无",
+                    "classInfo": {
+                        "no": "05111202",
+                        "name": "一班",
+                        "classTeacherNo": "bzr_t1021",
+                        "monitorNo": "s_12132",
+                        "honour": "新进班级",
+
+                        "schCourse": "6年",
+                        "type": "普通小学班",
+                        "artsAndScience": "文科",
+                        "graduateDate": "2022-06-30",
+                        "minzuFlg": "否",
+                        "bilingual": "一类模式"
+                    }
+                },
+                {
+                    "id": "100",
+                    "code": "学校代码-NKMS",
+                    "schoolName": "南开小学",
+                    "higherSchool": "上级学校-南开中学",
+                    "nameInEn": "nankai primary school",
+
+                    "addr": "重庆市xx区",
+                    "postCode": "400101",
+                    "regionCode": "学校区划码-0579",
+                    "bornDate": "2017-12-12",
+                    "celebrateDate": "2017-12-12",
+
+                    "schoolType": "2",
+                    "authority": "地级教育部门",
+                    "corporateNo": "JCTB020120",
+                    "corporateLicense": "FR165132",
+                    "headMasterNo": "XZ026",
+
+                    "headMasterName": "李太白",
+                    "partyLeaderNo": "2001",
+                    "organizationCode": "932185476",
+                    "tel": "0591-12345678",
+                    "fax": "6800000",
+
+                    "email": "xxx@163.com",
+                    "homepage": "http://111.com",
+                    "history": "历史沿革",
+                    "schoolHost": "2",
+                    "higherAuthority": "同安区教育局",
+
+                    "cityType": "主城区",
+                    "economyType": "非贫困",
+                    "minzuType": "非民族自治县",
+                    "primarySchCourse": "6年",
+                    "primarySchAge": "7周岁",
+
+                    "juniorMidSchCourse": "3年",
+                    "juniorMidSchAge": "13",
+                    "seniorMidSchCourse": "3年",
+                    "firstLanguage": "汉语",
+                    "secondLanguage": "en",
+
+                    "studentArea": "20公里",
+                    "note": "note-无",
+                    "classInfo": {
+                        "no": "05111202",
+                        "name": "一班",
+                        "classTeacherNo": "bzr_t1021",
+                        "monitorNo": "s_12132",
+                        "honour": "新进班级",
+
+                        "schCourse": "6年",
+                        "type": "普通小学班",
+                        "artsAndScience": "文科",
+                        "graduateDate": "2022-06-30",
+                        "minzuFlg": "否",
+                        "bilingual": "一类模式"
+                    }
+                },
+                {
+                    "id": "100",
+                    "code": "学校代码-NKMS",
+                    "schoolName": "南开小学",
+                    "higherSchool": "上级学校-南开中学",
+                    "nameInEn": "nankai primary school",
+
+                    "addr": "重庆市xx区",
+                    "postCode": "400101",
+                    "regionCode": "学校区划码-0579",
+                    "bornDate": "2017-12-12",
+                    "celebrateDate": "2017-12-12",
+
+                    "schoolType": "2",
+                    "authority": "地级教育部门",
+                    "corporateNo": "JCTB020120",
+                    "corporateLicense": "FR165132",
+                    "headMasterNo": "XZ026",
+
+                    "headMasterName": "李太白",
+                    "partyLeaderNo": "2001",
+                    "organizationCode": "932185476",
+                    "tel": "0591-12345678",
+                    "fax": "6800000",
+
+                    "email": "xxx@163.com",
+                    "homepage": "http://111.com",
+                    "history": "历史沿革",
+                    "schoolHost": "2",
+                    "higherAuthority": "同安区教育局",
+
+                    "cityType": "主城区",
+                    "economyType": "非贫困",
+                    "minzuType": "非民族自治县",
+                    "primarySchCourse": "6年",
+                    "primarySchAge": "7周岁",
+
+                    "juniorMidSchCourse": "3年",
+                    "juniorMidSchAge": "13",
+                    "seniorMidSchCourse": "3年",
+                    "firstLanguage": "汉语",
+                    "secondLanguage": "en",
+
+                    "studentArea": "20公里",
+                    "note": "note-无",
+                    "classInfo": {
+                        "no": "05111202",
+                        "name": "一班",
+                        "classTeacherNo": "bzr_t1021",
+                        "monitorNo": "s_12132",
+                        "honour": "新进班级",
+
+                        "schCourse": "6年",
+                        "type": "普通小学班",
+                        "artsAndScience": "文科",
+                        "graduateDate": "2022-06-30",
+                        "minzuFlg": "否",
+                        "bilingual": "一类模式"
+                    }
+                },
+                {
+                    "id": "100",
+                    "code": "学校代码-NKMS",
+                    "schoolName": "南开小学",
+                    "higherSchool": "上级学校-南开中学",
+                    "nameInEn": "nankai primary school",
+
+                    "addr": "重庆市xx区",
+                    "postCode": "400101",
+                    "regionCode": "学校区划码-0579",
+                    "bornDate": "2017-12-12",
+                    "celebrateDate": "2017-12-12",
+
+                    "schoolType": "2",
+                    "authority": "地级教育部门",
+                    "corporateNo": "JCTB020120",
+                    "corporateLicense": "FR165132",
+                    "headMasterNo": "XZ026",
+
+                    "headMasterName": "李太白",
+                    "partyLeaderNo": "2001",
+                    "organizationCode": "932185476",
+                    "tel": "0591-12345678",
+                    "fax": "6800000",
+
+                    "email": "xxx@163.com",
+                    "homepage": "http://111.com",
+                    "history": "历史沿革",
+                    "schoolHost": "2",
+                    "higherAuthority": "同安区教育局",
+
+                    "cityType": "主城区",
+                    "economyType": "非贫困",
+                    "minzuType": "非民族自治县",
+                    "primarySchCourse": "6年",
+                    "primarySchAge": "7周岁",
+
+                    "juniorMidSchCourse": "3年",
+                    "juniorMidSchAge": "13",
+                    "seniorMidSchCourse": "3年",
+                    "firstLanguage": "汉语",
+                    "secondLanguage": "en",
+
+                    "studentArea": "20公里",
+                    "note": "note-无",
+                    "classInfo": {
+                        "no": "05111202",
+                        "name": "一班",
+                        "classTeacherNo": "bzr_t1021",
+                        "monitorNo": "s_12132",
+                        "honour": "新进班级",
+
+                        "schCourse": "6年",
+                        "type": "普通小学班",
+                        "artsAndScience": "文科",
+                        "graduateDate": "2022-06-30",
+                        "minzuFlg": "否",
+                        "bilingual": "一类模式"
+                    }
+                },
+                {
+                    "id": "100",
+                    "code": "学校代码-NKMS",
+                    "schoolName": "南开小学",
+                    "higherSchool": "上级学校-南开中学",
+                    "nameInEn": "nankai primary school",
+
+                    "addr": "重庆市xx区",
+                    "postCode": "400101",
+                    "regionCode": "学校区划码-0579",
+                    "bornDate": "2017-12-12",
+                    "celebrateDate": "2017-12-12",
+
+                    "schoolType": "2",
+                    "authority": "地级教育部门",
+                    "corporateNo": "JCTB020120",
+                    "corporateLicense": "FR165132",
+                    "headMasterNo": "XZ026",
+
+                    "headMasterName": "李太白",
+                    "partyLeaderNo": "2001",
+                    "organizationCode": "932185476",
+                    "tel": "0591-12345678",
+                    "fax": "6800000",
+
+                    "email": "xxx@163.com",
+                    "homepage": "http://111.com",
+                    "history": "历史沿革",
+                    "schoolHost": "2",
+                    "higherAuthority": "同安区教育局",
+
+                    "cityType": "主城区",
+                    "economyType": "非贫困",
+                    "minzuType": "非民族自治县",
+                    "primarySchCourse": "6年",
+                    "primarySchAge": "7周岁",
+
+                    "juniorMidSchCourse": "3年",
+                    "juniorMidSchAge": "13",
+                    "seniorMidSchCourse": "3年",
+                    "firstLanguage": "汉语",
+                    "secondLanguage": "en",
+
+                    "studentArea": "20公里",
+                    "note": "note-无",
+                    "classInfo": {
+                        "no": "05111202",
+                        "name": "一班",
+                        "classTeacherNo": "bzr_t1021",
+                        "monitorNo": "s_12132",
+                        "honour": "新进班级",
+
+                        "schCourse": "6年",
+                        "type": "普通小学班",
+                        "artsAndScience": "文科",
+                        "graduateDate": "2022-06-30",
+                        "minzuFlg": "否",
+                        "bilingual": "一类模式"
+                    }
+                }
+            ]
+        }
+    },
+    "getRewardsTeacherList": {
+        "message": "getSchoolList-执行成功",
+        "success": true,
+        "code": 0,
+        "content": {
+            "pager": {
+                "count": 100,
+                "pageSize": 10,
+                "url": "/area/",
+                "currentPage": "1",
+                "rewardLevel": "1"
+            },
+            "list": [
+                {
+                    "id": "100",
+                    "rewardsName": "刘刚",
+                    "idCard": "500109199307088310",
+                    "schoolName": "江北中学",
+                    "rewardProject": "计算机",
+                    "rewardLevel": "一等奖",
+                    "rewardWay": "微信",
+                    "rewardContent": "转账20000",
+                    "rewardWhy": "做出了巨大贡献",
+                    "honorCode": "88888888",
+                    "rewardType": "救死扶伤",
+                    "rewardPlaceLevel": "国家级",
+                    "rewardUnit": "国家教育局",
+                    "rewardTime": "20170809",
+                    "rewardRealNameCode": "777777",
+                    "rewardRealName": "科学技术奖励"
+                },
+                {
+                    "id": "100",
+                    "rewardsName": "刘刚",
+                    "idCard": "500109199307088310",
+                    "schoolName": "江北中学",
+                    "rewardProject": "计算机",
+                    "rewardLevel": "一等奖",
+                    "rewardWay": "微信",
+                    "rewardContent": "转账20000",
+                    "rewardWhy": "做出了巨大贡献",
+                    "honorCode": "88888888",
+                    "rewardType": "救死扶伤",
+                    "rewardPlaceLevel": "国家级",
+                    "rewardUnit": "国家教育局",
+                    "rewardTime": "20170809",
+                    "rewardRealNameCode": "777777",
+                    "rewardRealName": "科学技术奖励"
+                }
+            ]
+        }
+    },
+    "getStudentList": {
+        "message": "getStudentList-执行成功",
+        "code": 0,
+        "content": {
+            "pager": {
+                "count": 100,
+                "pageSize": 20,
+                "url": "/area/get-student-list",
+                "currentPage": 1
+            },
+            "list": [
+                {
+                    "studentId": "100",
+                    "schoolName": "第一小学",
+                    "studentName": "余亮",
+                    "currentStudentStatus": "在读",
+                    "yearOfEntry": "2017.01.01",
+                    "schoolSystem": "六年制",
+                    "studentCategoryCode": "普通小学生",
+                    "professionalCode": "哲学",
+                    "classNumber": "1班",
+                    "gradeNumber": "一年级",
+                    "transactionCategoryCode": "留级",
+                    "transactionDate": "2018/4/25",
+                    "transaction": "成绩太差",
+                    "transactionReasonCode": "2018/4/25",
+                    "approvalNumber": "WH2541",
+                    "transactionSourceSchoolCode": "101",
+                    "transactionGoingSchoolCode": "102",
+                    "transactionDescription": "无",
+                    "originalDepartmentNumber": "马克思学院",
+                    "originalProfessionalCode": "哲学",
+                    "originalClassNumber": "1班",
+                    "originalGradeNumber": "一年级",
+                    "originalSchoolSystem": "六年制",
+                    "nowDepartmentNumber": "自动化学院",
+                    "nowProfessionalCode": "自动化",
+                    "nowClassNumber": "2班",
+                    "nowGradeNumber": "二年级",
+                    "nowSchoolSystem": "三年制"
+                },
+                {
+                    "studentId": "101",
+                    "schoolName": "第一小学",
+                    "studentName": "叶枫",
+                    "currentStudentStatus": "在读",
+                    "yearOfEntry": "2017.01.01",
+                    "schoolSystem": "六年制"
+                },
+                {
+                    "studentId": "102",
+                    "schoolName": "第一小学",
+                    "studentName": "谢云流",
+                    "currentStudentStatus": "在读",
+                    "yearOfEntry": "2017.01.01",
+                    "schoolSystem": "六年制"
+                },
+                {
+                    "studentId": "103",
+                    "schoolName": "第二小学",
+                    "studentName": "张小凡",
+                    "currentStudentStatus": "在读",
+                    "yearOfEntry": "2017.01.01",
+                    "schoolSystem": "六年制"
+                },
+                {
+                    "studentId": "104",
+                    "schoolName": "第一小学",
+                    "studentName": "张三",
+                    "currentStudentStatus": "在读",
+                    "yearOfEntry": "2017.01.01",
+                    "schoolSystem": "六年制"
+                }
+            ]
+        }
+    },
+    "getCourseList": {
+        "message": "getCourseList-执行课程成功",
+        "code": 0,
+        "content": {
+            "pager": {
+                "count": 100,
+                "pageSize": 20,
+                "url": "/area/get-course-list",
+                "currentPage": 1
+            },
+            "list": [
+                {
+                    "schoolName": "第一小学",
+                    "courseId": "100",
+                    "courseName": "语文",
+                    "courseDescription": "本课程引导学生在中学语文学习的基础上进一步拓宽视.",
+                    "courseCode": "11",
+                    "courseLevel": "国家课程",
+                    "courseAlias": "国文",
+                    "courseRequire": "通过对文学作品表现手法和具体写作技巧的分析，通过作文的实际训练，使学习者提高写作水平，基本做到文通字顺，主题明确，结构合理，符合规范；通过对作品的解读、赏析，培养高尚的道德情操和健康的审美情趣，提升自身的文化素养和品位；学习者应能够借助教材的“注释”和其它工具书，基本读懂中国古代及近代文学作品，并能对其进行大致鉴赏和分析评",
+                    "totalPeriod": "161",
+                    "weekPeriod": "8",
+                    "selfStudyPeriod": "20",
+                    "teachingMethods": "面授讲课",
+                    "textbookCoding": "T5841",
+                    "referenceBook": "人教语文"
+                },
+                {
+                    "courseId": "101",
+                    "schoolName": "第一小学",
+                    "courseName": "数学",
+                    "courseLevel": "国家课程",
+                    "courseDescription": "本课程学习的重要意义在于：培养学生的数学逻辑思维",
+                    "totalPeriod": "160"
+                },
+                {
+                    "courseId": "102",
+                    "schoolName": "第一小学",
+                    "courseName": "美术",
+                    "courseLevel": "国家课程",
+                    "courseDescription": "本课程学习的重要意义在于：培养学生的数学逻辑思维",
+                    "totalPeriod": "160"
+                },
+                {
+                    "courseId": "103",
+                    "schoolName": "第二小学",
+                    "courseName": "自然",
+                    "courseLevel": "国家课程",
+                    "courseDescription": "本课程学习的重要意义在于：培养学生的数学逻辑思维",
+                    "totalPeriod": "30"
+                },
+                {
+                    "courseId": "104",
+                    "schoolName": "第一小学",
+                    "courseName": "张三",
+                    "courseLevel": "国家课程",
+                    "courseDescription": "本课程学习的重要意义在于：培养学生的数学逻辑思维",
+                    "totalPeriod": "120"
+                }
+            ]
+        }
+    },
+    "getScheduleList": {
+        "message": "getScheduleList-执行课表成功",
+        "code": 0,
+        "content": {
+            "pager": {
+                "count": 100,
+                "pageSize": 20,
+                "url": "/area/get-schedule-list",
+                "currentPage": 1
+            },
+            "list": [
+                {
+                    "classId": "100",
+                    "schoolName": "第一小学",
+                    "semester": "2017春季学期",
+                    "gradeAndClass": "三年级一班",
+                    "schoolTimetable": [
+                        "课表数据"
+                    ]
+                },
+                {
+                    "classId": "101",
+                    "schoolName": "第一小学",
+                    "semester": "2017春季学期",
+                    "gradeAndClass": "三年级一班"
+                },
+                {
+                    "classId": "102",
+                    "schoolName": "第一小学",
+                    "semester": "2017春季学期",
+                    "gradeAndClass": "三年级一班"
+                },
+                {
+                    "classId": "103",
+                    "schoolName": "第二小学",
+                    "semester": "2017春季学期",
+                    "gradeAndClass": "三年级一班"
+                },
+                {
+                    "classId": "104",
+                    "schoolName": "第一小学",
+                    "semester": "2017春季学期",
+                    "gradeAndClass": "三年级一班"
+                }
+            ]
+        }
+    },
+    "getRewardsInfo": {
+        "message": "getCourseList-执行成功",
+        "code": 0,
+        "data": {
+            "id": "100",
+            "rewardsName": "刘刚",
+            "idCard": "500109199307088310",
+            "schoolName": "江北中学",
+            "rewardProject": "计算机",
+            "rewardLevel": "一等奖",
+            "rewardWay": "微信",
+            "rewardContent": "转账20000"
+        }
+    },
+    "getTeacherInfoList": {
+        "message": "getTeacherInfoList-执行成功",
+        "code": 0,
+        "content": {
+            "list": [
+                {
+                    "id": 1,
+                    "schoolName": "第一小学",
+                    "name": "张三",
+                    "job": "语文老师",
+                    "course": "语文",
+                    "mobile": "123456798",
+                    "jobNumber": "1",
+                    "schoolId": 1,
+                    "englishName": "",
+                    "pinyin": "",
+                    "usedName": "",
+                    "sex": "",
+                    "typeOfCertificate": "身份证",
+                    "countryOfCitizenship": "中国",
+                    "ethnic": "汉族",
+                    "origin": "重庆",
+                    "placeOfBirth": "",
+                    "overseasChinese": "",
+                    "maritalStatus": "",
+                    "politicalStatus": "",
+                    "healthStatus": "",
+                    "religion": "",
+                    "bloodType": "",
+                    "price": "",
+                    "institutionNumber": "",
+                    "homeAddress": "",
+                    "currentAddress": "",
+                    "accountLocation": "",
+                    "natureOfResidence": "",
+                    "education": "",
+                    "compilingType": "",
+                    "fileNumber": "",
+                    "fileText": "",
+                    "email": "",
+                    "homepage": "",
+                    "specialty": "",
+                    "jobOccupation": "",
+                    "courseSection": "",
+                    "idCard": "",
+                    "idCardValidityPeriod": "",
+                    "workDate": "",
+                    "arrivalDate": "",
+                    "dateFromTeaching": "",
+                    "postalCode": "",
+                    "birthday": ""
+                },
+                {
+                    "id": 2,
+                    "schoolName": "第二小学",
+                    "name": "李四",
+                    "job": "数学老师",
+                    "course": "数学",
+                    "mobile": "132456798",
+                    "jobNumber": "1",
+                    "schoolId": 1,
+                    "englishName": "",
+                    "pinyin": "",
+                    "usedName": "",
+                    "sex": "",
+                    "typeOfCertificate": "身份证",
+                    "countryOfCitizenship": "中国",
+                    "ethnic": "汉族",
+                    "origin": "重庆",
+                    "placeOfBirth": "",
+                    "overseasChinese": "",
+                    "maritalStatus": "",
+                    "politicalStatus": "",
+                    "healthStatus": "",
+                    "religion": "",
+                    "bloodType": "",
+                    "price": "",
+                    "institutionNumber": "",
+                    "homeAddress": "",
+                    "currentAddress": "",
+                    "accountLocation": "",
+                    "natureOfResidence": "",
+                    "education": "",
+                    "compilingType": "",
+                    "fileNumber": "",
+                    "fileText": "",
+                    "email": "",
+                    "homepage": "",
+                    "specialty": "",
+                    "jobOccupation": "",
+                    "courseSection": "",
+                    "idCard": "",
+                    "idCardValidityPeriod": "",
+                    "workDate": "",
+                    "arrivalDate": "",
+                    "dateFromTeaching": "",
+                    "postalCode": "",
+                    "birthday": ""
+                }
+            ],
+            "pager": {
+                "count": 40,
+                "currentPage": 1,
+                "size": 10
+            }
+        }
+    },
+    "getStudentInfoList": {
+        "message": "getStudentInfoList-执行成功",
+        "code": 0,
+        "content": {
+            "list": [
+                {
+                    "schoolNumber": "1",
+                    "schoolName": "第一小学",
+                    "name": "张三",
+                    "className": "三年级一班",
+                    "parentName": "王五",
+                    "parentMobile": "123456798",
+                    "schoolId": 1,
+                    "englishName": "",
+                    "pinyin": "",
+                    "usedName": "",
+                    "sex": "",
+                    "birthday": "",
+                    "placeOfBirth": "",
+                    "origin": "重庆",
+                    "ethnic": "汉族",
+                    "countryOfCitizenship": "中国",
+                    "typeOfCertificate": "身份证",
+                    "idCard": "身份证号码",
+                    "maritalStatus": "婚姻状况",
+                    "overseasChinese": "侨外",
+                    "politicalStatus": "政治面貌",
+                    "healthStatus": "健康状况",
+                    "religion": "宗教信仰",
+                    "bloodType": "血型",
+                    "price": "照片",
+                    "idCardValidityPeriod": "身份证有效期",
+                    "oneChild": "独生子女标志",
+                    "enrolmentYear": "入学年月",
+                    "gradeName": "年级",
+                    "classNumber": "班号",
+                    "classStudent": "学生类别",
+                    "currentAddress": "现住址",
+                    "accountLocation": "户口所在地",
+                    "natureOfResidence": "户口性质",
+                    "floatingPopulation": "是否流动人口",
+                    "specialty": "特长",
+                    "contactAddress": "通讯地址",
+                    "postalCode": "邮政编码",
+                    "email": "电子邮箱",
+                    "homepage": "主页地址",
+                    "registerNumber": "学籍号",
+                    "parent": {
+                        "name": "张三爸",
+                        "birthday": "197505",
+                        "ethnic": "民族",
+                        "countryOfCitizenship": "国籍",
+                        "healthStatus": "健康状况",
+                        "employer": "工作单位",
+                        "occupation": "从业码",
+                        "technicalPosition": "专业技术职务",
+                        "jobLevel": "职务级别",
+                        "mobile": "电话",
+                        "email": "电子信箱",
+                        "guardian": "是否为监护人",
+                        "sex": "性别",
+                        "relationship": "关系",
+                        "phone": "手机",
+                        "contactAddress": "通信地址",
+                        "education": "学历"
+                    }
+                },
+                {
+                    "schoolNumber": "2",
+                    "schoolName": "第二小学",
+                    "name": "李四",
+                    "className": "三年级二班",
+                    "parentName": "王五",
+                    "parentMobile": "123456798",
+                    "schoolId": 1,
+                    "englishName": "",
+                    "pinyin": "",
+                    "usedName": "",
+                    "sex": "",
+                    "birthday": "",
+                    "placeOfBirth": "",
+                    "origin": "重庆",
+                    "ethnic": "汉族",
+                    "countryOfCitizenship": "中国",
+                    "typeOfCertificate": "身份证",
+                    "idCard": "身份证号码",
+                    "maritalStatus": "婚姻状况",
+                    "overseasChinese": "侨外",
+                    "politicalStatus": "政治面貌",
+                    "healthStatus": "健康状况",
+                    "religion": "宗教信仰",
+                    "bloodType": "血型",
+                    "price": "照片",
+                    "idCardValidityPeriod": "身份证有效期",
+                    "oneChild": "独生子女标志",
+                    "enrolmentYear": "入学年月",
+                    "gradeName": "年级",
+                    "classNumber": "班号",
+                    "classStudent": "学生类别",
+                    "currentAddress": "现住址",
+                    "accountLocation": "户口所在地",
+                    "natureOfResidence": "户口性质",
+                    "floatingPopulation": "是否流动人口",
+                    "specialty": "特长",
+                    "contactAddress": "通讯地址",
+                    "postalCode": "邮政编码",
+                    "email": "电子邮箱",
+                    "homepage": "主页地址",
+                    "registerNumber": "学籍号",
+                    "parent": {
+                        "name": "张辉",
+                        "birthday": "197505",
+                        "ethnic": "民族",
+                        "countryOfCitizenship": "国籍",
+                        "healthStatus": "健康状况",
+                        "employer": "工作单位",
+                        "occupation": "从业码",
+                        "technicalPosition": "专业技术职务",
+                        "jobLevel": "职务级别",
+                        "mobile": "电话",
+                        "email": "电子信箱",
+                        "guardian": "是否为监护人",
+                        "sex": "性别",
+                        "relationship": "关系",
+                        "phone": "手机",
+                        "contactAddress": "通信地址",
+                        "education": "学历"
+                    }
+                }
+            ],
+            "pager": {
+                "count": 40,
+                "currentPage": 1,
+                "size": 10
+            }
+        }
+    },
+    "getGradeManageList": {
+        "message": "getGradeManageList-执行成功",
+        "code": 0,
+        "content": {
+            "list": [
+                {
+                    "schoolNumber": "1",
+                    "schoolName": "第一小学",
+                    "name": "张三",
+                    "language": "98",
+                    "mathematics": "98",
+                    "english": "98",
+                    "subject": [
+                        {
+                            "schoolYear": "学年",
+                            "term": "学期",
+                            "testDate": "考试日期",
+                            "course": "语文",
+                            "examinations": "考试方式",
+                            "examinationNature": "考试性质",
+                            "examFormat": "考试形式",
+                            "scoreTestResults": "分数类考试成绩",
+                            "gradeTestResults": "等级类考试成绩",
+                            "courseResults": "课程成绩",
+                            "courseGradeResults": "课程等级成绩",
+                            "teacherJobNumber": "任课教师工号",
+                            "gradeEntryNumber": "成绩录入人号",
+                            "gradeEntryDate": "成绩录入日期",
+                            "gradeEntryTime": "成绩录入时间"
+                        },
+                        {
+                            "schoolYear": "学年",
+                            "term": "学期",
+                            "testDate": "考试日期",
+                            "course": "数学",
+                            "examinations": "考试方式",
+                            "examinationNature": "考试性质",
+                            "examFormat": "考试形式",
+                            "scoreTestResults": "分数类考试成绩",
+                            "gradeTestResults": "等级类考试成绩",
+                            "courseResults": "课程成绩",
+                            "courseGradeResults": "课程等级成绩",
+                            "teacherJobNumber": "任课教师工号",
+                            "gradeEntryNumber": "成绩录入人号",
+                            "gradeEntryDate": "成绩录入日期",
+                            "gradeEntryTime": "成绩录入时间"
+                        },
+                        {
+                            "schoolYear": "学年",
+                            "term": "学期",
+                            "testDate": "考试日期",
+                            "course": "英语",
+                            "examinations": "考试方式",
+                            "examinationNature": "考试性质",
+                            "examFormat": "考试形式",
+                            "scoreTestResults": "分数类考试成绩",
+                            "gradeTestResults": "等级类考试成绩",
+                            "courseResults": "课程成绩",
+                            "courseGradeResults": "课程等级成绩",
+                            "teacherJobNumber": "任课教师工号",
+                            "gradeEntryNumber": "成绩录入人号",
+                            "gradeEntryDate": "成绩录入日期",
+                            "gradeEntryTime": "成绩录入时间"
+                        }
+                    ]
+                },
+                {
+                    "schoolNumber": "2",
+                    "schoolName": "第2小学",
+                    "name": "张2",
+                    "language": "92",
+                    "mathematics": "92",
+                    "english": "92",
+                    "subject": [
+                        {
+                            "schoolYear": "学年",
+                            "term": "学期",
+                            "testDate": "考试日期",
+                            "course": "课程号",
+                            "examinations": "考试方式",
+                            "examinationNature": "考试性质",
+                            "examFormat": "考试形式",
+                            "scoreTestResults": "分数类考试成绩",
+                            "gradeTestResults": "等级类考试成绩",
+                            "courseResults": "课程成绩",
+                            "courseGradeResults": "课程等级成绩",
+                            "teacherJobNumber": "任课教师工号",
+                            "gradeEntryNumber": "成绩录入人号",
+                            "gradeEntryDate": "成绩录入日期",
+                            "gradeEntryTime": "成绩录入时间"
+                        },
+                        {
+                            "schoolYear": "学年",
+                            "term": "学期",
+                            "testDate": "考试日期",
+                            "course": "课程号",
+                            "examinations": "考试方式",
+                            "examinationNature": "考试性质",
+                            "examFormat": "考试形式",
+                            "scoreTestResults": "分数类考试成绩",
+                            "gradeTestResults": "等级类考试成绩",
+                            "courseResults": "课程成绩",
+                            "courseGradeResults": "课程等级成绩",
+                            "teacherJobNumber": "任课教师工号",
+                            "gradeEntryNumber": "成绩录入人号",
+                            "gradeEntryDate": "成绩录入日期",
+                            "gradeEntryTime": "成绩录入时间"
+                        },
+                        {
+                            "schoolYear": "学年",
+                            "term": "学期",
+                            "testDate": "考试日期",
+                            "course": "课程号",
+                            "examinations": "考试方式",
+                            "examinationNature": "考试性质",
+                            "examFormat": "考试形式",
+                            "scoreTestResults": "分数类考试成绩",
+                            "gradeTestResults": "等级类考试成绩",
+                            "courseResults": "课程成绩",
+                            "courseGradeResults": "课程等级成绩",
+                            "teacherJobNumber": "任课教师工号",
+                            "gradeEntryNumber": "成绩录入人号",
+                            "gradeEntryDate": "成绩录入日期",
+                            "gradeEntryTime": "成绩录入时间"
+                        }
+                    ]
+                },
+                {
+                    "schoolNumber": "2",
+                    "schoolName": "第2小学",
+                    "name": "张2",
+                    "language": "92",
+                    "mathematics": "92",
+                    "english": "92",
+                    "subject": [
+                        {
+                            "schoolYear": "学年",
+                            "term": "学期",
+                            "testDate": "考试日期",
+                            "course": "课程号",
+                            "examinations": "考试方式",
+                            "examinationNature": "考试性质",
+                            "examFormat": "考试形式",
+                            "scoreTestResults": "分数类考试成绩",
+                            "gradeTestResults": "等级类考试成绩",
+                            "courseResults": "课程成绩",
+                            "courseGradeResults": "课程等级成绩",
+                            "teacherJobNumber": "任课教师工号",
+                            "gradeEntryNumber": "成绩录入人号",
+                            "gradeEntryDate": "成绩录入日期",
+                            "gradeEntryTime": "成绩录入时间"
+                        },
+                        {
+                            "schoolYear": "学年",
+                            "term": "学期",
+                            "testDate": "考试日期",
+                            "course": "课程号",
+                            "examinations": "考试方式",
+                            "examinationNature": "考试性质",
+                            "examFormat": "考试形式",
+                            "scoreTestResults": "分数类考试成绩",
+                            "gradeTestResults": "等级类考试成绩",
+                            "courseResults": "课程成绩",
+                            "courseGradeResults": "课程等级成绩",
+                            "teacherJobNumber": "任课教师工号",
+                            "gradeEntryNumber": "成绩录入人号",
+                            "gradeEntryDate": "成绩录入日期",
+                            "gradeEntryTime": "成绩录入时间"
+                        },
+                        {
+                            "schoolYear": "学年",
+                            "term": "学期",
+                            "testDate": "考试日期",
+                            "course": "课程号",
+                            "examinations": "考试方式",
+                            "examinationNature": "考试性质",
+                            "examFormat": "考试形式",
+                            "scoreTestResults": "分数类考试成绩",
+                            "gradeTestResults": "等级类考试成绩",
+                            "courseResults": "课程成绩",
+                            "courseGradeResults": "课程等级成绩",
+                            "teacherJobNumber": "任课教师工号",
+                            "gradeEntryNumber": "成绩录入人号",
+                            "gradeEntryDate": "成绩录入日期",
+                            "gradeEntryTime": "成绩录入时间"
+                        }
+                    ]
+                }
+            ],
+            "pager": {
+                "count": 40,
+                "currentPage": 1,
+                "size": 10
+            }
+        }
+    },
+    "getSchoolInfo": {
+        "message": "getSchoolInfo-执行成功",
+        "code": 0,
+        "content": {
+            "list": [
+                {
+                    "id": 1,
+                    "name": "第一所学校"
+                },
+                {
+                    "id": 2,
+                    "name": "第二所学校"
+                },
+                {
+                    "id": 3,
+                    "name": "第三所学校"
+                },
+                {
+                    "id": 4,
+                    "name": "第四所学校"
+                },
+                {
+                    "id": 5,
+                    "name": "第五所学校"
+                }
+            ]
+        }
+    },
+    "getBuildingList": {
+        "message": "getBuildingList-执行成功",
+        "code": 0,
+        "content": {
+            "pager": {
+                "count": 100,
+                "pageSize": 20,
+                "url": "/area/get-building-list",
+                "currentPage": 1
+            },
+            "list": [
+                {
+                    "id": "100",
+                    "buildingImg": "imgurl",
+                    "buildingName": "行知楼",
+                    "buildingId": "88855",
+                    "region": "分部",
+                    "buildingUse": "教学楼"
+                },
+                {
+                    "id": "101",
+                    "buildingImg": "第一小学",
+                    "buildingName": "行知楼",
+                    "buildingId": "88855",
+                    "region": "本部",
+                    "buildingUse": "综合楼"
+                },
+                {
+                    "id": "102",
+                    "buildingImg": "第一小学",
+                    "buildingName": "行知楼",
+                    "buildingId": "88855",
+                    "region": "本部",
+                    "buildingUse": "综合楼"
+                },
+                {
+                    "id": "103",
+                    "buildingImg": "第二小学",
+                    "buildingName": "行知楼",
+                    "buildingId": "88855",
+                    "region": "本部",
+                    "buildingUse": "综合楼"
+                },
+                {
+                    "id": "104",
+                    "buildingImg": "第一小学",
+                    "buildingName": "行知楼",
+                    "buildingId": "88855",
+                    "region": "本部",
+                    "buildingUse": "综合楼"
+                }
+            ]
+        }
+    },
+    "getRoomList": {
+        "message": "getRoomList-执行成功",
+        "code": 0,
+        "content": {
+            "pager": {
+                "count": 100,
+                "pageSize": 20,
+                "url": "/area/get-room-list",
+                "currentPage": 1
+            },
+            "list": [
+                {
+                    "id": "100",
+                    "buildingName": "第三教学楼",
+                    "roomName": "三年级二班",
+                    "roomId": "88855",
+                    "floor": "4层",
+                    "roomUse": "教学楼",
+                    "buildingArea": "325.12㎡"
+                },
+                {
+                    "id": "101",
+                    "buildingName": "第三教学楼",
+                    "roomName": "三年级二班",
+                    "roomId": "88855",
+                    "floor": "3层",
+                    "roomUse": "综合楼",
+                    "buildingArea": "325.12㎡"
+                },
+                {
+                    "id": "102",
+                    "buildingName": "第三教学楼",
+                    "roomName": "三年级二班",
+                    "roomId": "88855",
+                    "floor": "3层",
+                    "roomUse": "综合楼",
+                    "buildingArea": "325.12㎡"
+                },
+                {
+                    "id": "103",
+                    "buildingName": "逸夫楼",
+                    "roomName": "行知楼",
+                    "roomId": "88855",
+                    "floor": "3层",
+                    "roomUse": "综合楼",
+                    "buildingArea": "325.12㎡"
+                },
+                {
+                    "id": "104",
+                    "buildingName": "第三教学楼",
+                    "roomName": "行知楼",
+                    "roomId": "88855",
+                    "floor": "3层",
+                    "roomUse": "综合楼",
+                    "buildingArea": "325.12㎡"
+                }
+            ]
+        }
+    },
+    "physicalAllList": {
+        "message": "physicalAllList-执行成功",
+        "code": 0,
+        "content": {
+            "pager": {
+                "count": 100,
+                "size": 20,
+                "url": "/area/get-schedule-list",
+                "currentPage": 1
+            },
+            "list": [
+                {
+                    "studentId": "100",
+                    "schoolName": "第一小学",
+                    "studentName": "余亮",
+                    "medicalHistory": "无病",
+                    "physicalDate": "2017-01-01",
+                    "conclusion": "健康",
+                    "hospitalIdea": "身体健康",
+                    "mainDoctor":"李医生",
+                    "physicalObject": [
+                        {
+                            "physicalName": "内科",
+                            "doctorIdea": "健康",
+                            "doctor":"系医生",
+                            "physicalDate": "2018-4-28"
+                        },
+                        {
+                            "physicalName": "外科",
+                            "doctorIdea": "健康",
+                            "doctor":"阿布医生",
+                            "physicalDate": "2018-4-25"
+                        }
+                    ]
+                },
+                {
+                    "studentId": "101",
+                    "schoolName": "第一小学",
+                    "studentName": "叶枫",
+                    "medicalHistory": "无病",
+                    "physicalDate": "2017-09-01",
+                    "conclusion": "健康",
+                    "hospitalIdea": "身体健康",
+                    "mainDoctor":"张医生",
+                    "physicalObject": [
+                        {
+                            "physicalName": "内科",
+                            "doctorIdea": "健康",
+                            "doctor":"张医生",
+                            "physicalDate": "2018-4-28"
+                        },
+                        {
+                            "physicalName": "外科",
+                            "doctorIdea": "健康",
+                            "doctor":"两医生",
+                            "physicalDate": "2018-4-25"
+                        }
+                    ]
+                },
+                {
+                    "studentId": "102",
+                    "schoolName": "第一小学",
+                    "studentName": "谢云流",
+                    "medicalHistory": "无病",
+                    "physicalDate": "2018-04-01",
+                    "conclusion": "健康",
+                    "hospitalIdea": "身体健康",
+                    "mainDoctor":"王医生",
+                    "physicalObject":[]
+
+                },
+                {
+                    "studentId": "103",
+                    "schoolName": "第二小学",
+                    "studentName": "张小凡",
+                    "medicalHistory": "无病",
+                    "physicalDate": "2017-12-01",
+                    "conclusion": "健康",
+                    "hospitalIdea": "身体健康",
+                    "mainDoctor":"王医生",
+                    "physicalObject":[]
+
+                },
+                {
+                    "studentId": "104",
+                    "schoolName": "第一小学",
+                    "studentName": "张三",
+                    "medicalHistory": "无病",
+                    "physicalDate": "2018-01-01",
+                    "conclusion": "健康",
+                    "hospitalIdea": "身体健康",
+                    "mainDoctor":"王医生",
+                    "physicalObject":[]
+                }
+            ]
+        }
+    },
+    "getDropoutList": {
+        "message": "getDropoutList-执行成功",
+        "code": 0,
+        "content": {
+            "pager": {
+                "count": 40,
+                "pageSize": 20,
+                "url": "/area/",
+                "currentPage": 1
+            },
+            "list": [
+                {
+                    "studentId": "120324231",
+                    "schoolName": "酉州中学",
+                    "studentName": "张明",
+                    "reason": "外出打工",
+                    "time": "1500000000",
+                    "isBackSchool": 1,
+                    "state": "已做家长工作"
+                }
+            ]
+        }
+    },
+    "getPunishmentTeacherList": {
+        "code": 0,
+        "message": "getDropoutList-执行成功",
+        "content": {
+            "pager": {
+                "count": 100,
+                "pageSize": 10,
+                "url": "/area/",
+                "currentPage": "1",
+                "punishmentLevel": "1"
+            },
+            "list": [
+                {
+                    "id": "100",
+                    "punishmentName": "刘刚",
+                    "idCard": "500109199307088310",
+                    "schoolName": "江北中学",
+                    "punishmentRealName": "罚钱",
+                    "punishmentWhy": "打骂学生",
+                    "punishmentUnit": "惩处单位",
+                    "punishmentTime": "20180429",
+                    "punishmentUndo": "20180708",
+                    "punishmentContent": "禁止上课1年",
+                    "punishmentTitanic": "13456",
+                    "punishmentUndoTitanic": "456789",
+                    "punishmentWhyTitanic": "789123"
+                }
+            ]
+        }
+    },
+    "getRewardsStudentList": {
+        "code": 0,
+        "message": "getDropoutList-执行成功",
+        "content": {
+            "pager": {
+                "count": 100,
+                "pageSize": 10,
+                "url": "/area/",
+                "currentPage": "1",
+                "rewardLevel": "1"
+            },
+            "list": [
+                {
+                    "id": "100",
+                    "rewardsName": "刘刚",
+                    "studentId": "2",
+                    "schoolName": "江北中学",
+                    "rewardLevel": "一等奖",
+                    "rewardRealName": "三好学生",
+                    "academicYear": "2017-2018",
+                    "rewardWay": "微信",
+                    "rewardWhy": "做出了巨大贡献",
+                    "rewardType": "救死扶伤",
+                    "rewardUnit": "国家教育局",
+                    "rewardPlaceLevel": "国家级",
+                    "rewardTitanic": "48851"
+                }
+            ]
+        }
+    },
+    "getPunishmentStudentList": {
+        "code": 0,
+        "message": "",
+        "content": {
+            "pager": {
+                "count": 100,
+                "pageSize": 10,
+                "url": "/area/",
+                "currentPage": "1",
+                "punishmentLevel": "1"
+            },
+            "list": [
+                {
+                    "id": "100",
+                    "punishmentName": "刘刚",
+                    "studentId": "789456123",
+                    "schoolName": "江北中学",
+                    "punishmentLevel": "未评等级",
+                    "punishmentWay": "家庭作业加十倍",
+                    "punishmentTime": "20180429",
+                    "punishmentUndo": "20180708",
+                    "punishmentType": "旷课100天",
+                    "punishmentWhy": "打骂学生",
+                    "punishmentRealName": "罚钱",
+                    "punishmentTitanic": "13456",
+                    "punishmentUndoTitanic": "456789",
+                    "punishmentContent": "不听话"
+                }
+            ]
+        }
+    }
+}

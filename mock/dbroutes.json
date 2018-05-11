@@ -1,0 +1,21 @@
+{
+    "/mock/initPage.json": "/initPage",
+    "/mock/getUserInfo.json*": "/getUserInfo",
+    "/area/get-shool-list.json*": "/getSchoolList",
+    "/area/get-student-list*": "/getStudentList",
+    "/area/get-rewards-teacher-list.json*": "/getRewardsTeacherList",
+    "/area/get-punishment-teacher-list.json": "/getPunishmentTeacherList",
+    "/area/get-rewards-level.json*": "/getRewardsLevel",
+    "/area/get-course-list*": "/getCourseList",
+    "/area/get-schedule-list*": "/getScheduleList",
+    "/area/put-teacher-info-list.json*":"/getTeacherInfoList",
+    "/area/put-student-info-list.json*":"/getStudentInfoList",
+    "/area/put-grade-manage-list.json*":"/getGradeManageList",
+    "/area/get-school-info.json*":"/getSchoolInfo",
+    "/area/get-building-list*": "/getBuildingList",
+    "/area/get-room-list*": "/getRoomList",
+    "/area/physical-all-list.json*": "/physicalAllList",
+    "/area/get-dropout-lsit*": "/getDropoutList",
+    "/area/get-rewards-student-list.json*": "/getRewardsStudentList",
+    "/area/get-punishment-student-list.json*": "/getPunishmentStudentList"
+}

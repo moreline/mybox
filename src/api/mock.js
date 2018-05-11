@@ -1,0 +1,870 @@
+/**
+ * 用户 数据交互api.
+ *
+ */
+import axios from 'axios'
+import qs from 'qs'
+
+axios.defaults.headers.post['Content-Type'] =
+    'application/x-www-form-urlencoded'
+axios.defaults.headers.get['Content-Type'] =
+    'application/x-www-form-urlencoded'
+
+// POST传参序列化
+// axios.interceptors.request.use(
+//     function (config) {
+//         config.headers['Content-Type'] = 'application/x-www-form-urlencoded'
+//         if (config.method === 'post') {
+//             config.data = qs.stringify(config.data)
+//         }
+//         return config
+//     },
+//     function (error) {
+//         console.log('错误的传参')
+//         return Promise.reject(error)
+//     }
+// )
+// code状态码200判断
+axios.interceptors.response.use(
+    function (res) {
+        res.data['success'] = (res.data.code === 0)
+        if (res.status === 200 && !res.data.success) {
+            // 抽出 message,统一 message 的结构层次，以便于统一提示消息.
+            res.message = res.data.message
+            return Promise.reject(res)
+        }
+        return res
+    },
+    function (error) {
+        console.log('网络异常')
+        return Promise.reject(error)
+    }
+)
+// 数据接口主域名
+axios.defaults.baseURL = 'http://test-area.tcampus.cn'
+
+export default {
+    /**
+     * 示范 POST请求.
+     *
+     * @param {Function} cb     回调函数
+     *
+     */
+    initPage: function (cb) {
+        axios({
+            method: 'post',
+            url: '/mock/initPage.json',
+            responseType: 'json',
+            data: qs.stringify({userName: 'johnson'})
+        })
+        .then(function (response) {
+            cb(response)
+        })
+        .catch(function (error) {
+            cb(error)
+        })
+    },
+    /**
+     * 示范 get请求.
+     *
+     * @param {Function} cb     回调函数
+     *
+     */
+    testGetReq: function (cb) {
+        axios({
+            method: 'get',
+            url: '/mock/getUserInfo.json',
+            responseType: 'json',
+            // params: {}
+            params: {userName: 'johnson', age: 18}
+        })
+        .then(function (response) {
+            cb(response)
+        })
+        .catch(function (error) {
+            cb(error)
+        })
+    },
+    /**
+     * 示范 form 提交 -- TODO.
+     *
+     * @param {Function} cb     回调函数
+     *
+     */
+    testSubmitForm: function (cb) {
+        axios({
+            method: 'post',
+            url: '/mock/submitForm.json',
+            responseType: 'json',
+            // params: {}
+            params: {userName: 'johnson', age: 18}
+        })
+        .then(function (response) {
+            cb(response)
+        })
+        .catch(function (error) {
+            cb(error)
+        })
+    },
+    /**
+     * 通过搜索,获取学校列表.
+     *
+     * @param {Object} opts
+     * @param {Number|String} opts.pageSize 每页size
+     * @param {Number|String} opts.currentPage   当前页
+     * @param {String} opts.schoolName      学校名
+     * @param {String} opts.masterName      校长名
+     * @param {String} opts.schoolType      办学类型
+     * @param {String} opts.schoolHost      学校办别
+     * @param {Function} cbSuccess 回调函数--成功
+     * @param {Function} cbFail    回调函数--失败
+     *
+     * @author dz-gonglong-20180427
+     */
+    getSchoolListBySearch: function (opts, cbSuccess, cbFail) {
+        // console.log('api-getSchoolListBySearch:' + JSON.stringify(opts))
+        axios({
+            method: 'post',
+            url: '/v1/generatedata/getschool',
+            responseType: 'json',
+            data: qs.stringify({
+                currentPage: opts.currentPage,
+                pageSize: opts.pageSize,
+                schoolHost: opts.schoolHost,
+                schoolType: opts.schoolType,
+                schoolName: opts.schoolName,
+                masterName: opts.masterName
+            })
+        })
+        .then(function (response) {
+            // if (response.status === 200 && response.data.success) {
+            //     response.data.data.currentPage = parseInt(response.data.data.currentPage, 10) + 1 // TODO-MOCK
+            //     setTimeout(() => {
+            //         cbSuccess(response)
+            //     }, 1500)
+            // } else if (typeof cbFail === 'function') {
+            //     cbFail(response)
+            // }
+                setTimeout(() => {
+                    cbSuccess(response)
+                }, 1500)
+        })
+        .catch(function (error) {
+            if (typeof cbFail === 'function') {
+                cbFail(error)
+            }
+        })
+    },
+    /**
+     * 通过搜索,获取学生列表.
+     *
+     * @param {Object} opts
+     * @param {Number|String} opts.pageSize 每页size
+     * @param {Number|String} opts.currentPage   当前页
+     * @param {String} opts.studentName     学生名字
+     * @param {String} opts.studentId       学生id
+     * @param {Function} cbSuccess 回调函数--成功
+     * @param {Function} cbFail    回调函数--失败
+     *
+     * @author dz-Dreeo-20180427
+     */
+    getStudentListBySearch: function (opts, cbSuccess, cbFail) {
+        // console.log('api-getSchoolListBySearch:' + JSON.stringify(opts))
+        axios({
+            method: 'post',
+            url: '/v1/generatedata/getschoolcard',
+            responseType: 'json',
+            data: qs.stringify({
+                currentPage: opts.currentPage,
+                pageSize: opts.pageSize,
+                studentName: opts.studentName,
+                studentId: opts.studentId
+            })
+        })
+        .then(function (response) {
+            if (response.status === 200 && response.data.success) {
+                // response.data.content.pager.currentPage = parseInt(response.data.content.pager.currentPage, 10) + 1 // TODO-MOCK
+                setTimeout(() => {
+                    // TODO -- MOCK SERVER waiting
+                    cbSuccess(response)
+                }, 1500)
+            } else if (typeof cbFail === 'function') {
+                cbFail(response)
+            }
+        })
+        .catch(function (error) {
+            if (typeof cbFail === 'function') {
+                cbFail(error)
+            }
+        })
+    },
+    /**
+     * 通过搜索,获取课程列表.
+     *
+     * @param {Object} opts
+     * @param {Number|String} opts.pageSize 每页size
+     * @param {Number|String} opts.currentPage   当前页
+     * @param {String} opts.studentName     学生名字
+     * @param {String} opts.studentId       学生id
+     * @param {Function} cbSuccess 回调函数--成功
+     * @param {Function} cbFail    回调函数--失败
+     *
+     * @author dz-Drbeo-20180427
+     */
+    getCourseListBySearch: function (opts, cbSuccess, cbFail) {
+        // console.log('api-getSchoolListBySearch:' + JSON.stringify(opts))
+        axios({
+            method: 'post',
+            url: '/v1/generatedata/getcourse',
+            responseType: 'json',
+            data: qs.stringify({
+                currentPage: opts.currentPage,
+                pageSize: opts.pageSize,
+                studentName: opts.studentName,
+                studentId: opts.studentId
+            })
+        })
+        .then(function (response) {
+            if (response.status === 200 && response.data.success) {
+                // response.data.content.pager.currentPage = parseInt(response.data.content.pager.currentPage, 10) + 1 // TODO-MOCK
+
+                setTimeout(() => {
+                    // TODO -- MOCK SERVER waiting
+                    cbSuccess(response)
+                }, 1500)
+            } else if (typeof cbFail === 'function') {
+                cbFail(response)
+            }
+        })
+        .catch(function (error) {
+            if (typeof cbFail === 'function') {
+                cbFail(error)
+            }
+        })
+    },
+    /**
+     * 通过搜索,获取课表列表.
+     *
+     * @param {Object} opts
+     * @param {Number|String} opts.pageSize 每页size
+     * @param {Number|String} opts.currentPage   当前页
+     * @param {String} opts.studentName     学生名字
+     * @param {String} opts.studentId       学生id
+     * @param {Function} cbSuccess 回调函数--成功
+     * @param {Function} cbFail    回调函数--失败
+     *
+     * @author dz-Drbeo-20180427
+     */
+    getScheduleListBySearch: function (opts, cbSuccess, cbFail) {
+        // console.log('api-getSchoolListBySearch:' + JSON.stringify(opts))
+        axios({
+            method: 'post',
+            url: '/v1/generatedata/gettimetable',
+            responseType: 'json',
+            data: qs.stringify({
+                currentPage: opts.currentPage,
+                pageSize: opts.pageSize,
+                studentName: opts.studentName,
+                studentId: opts.studentId
+            })
+        })
+        .then(function (response) {
+            if (response.status === 200 && response.data.success) {
+                // response.data.content.pager.currentPage = parseInt(response.data.content.pager.currentPage, 10) + 1 // TODO-MOCK
+                setTimeout(() => {
+                    // TODO -- MOCK SERVER waiting
+                    cbSuccess(response)
+                }, 1500)
+            } else if (typeof cbFail === 'function') {
+                cbFail(response)
+            }
+        })
+        .catch(function (error) {
+            if (typeof cbFail === 'function') {
+                cbFail(error)
+            }
+        })
+    },
+    /**
+     * 通过搜索,获取建筑物列表.
+     *
+     * @param {Object} opts
+     * @param {Number|String} opts.pageSize 每页size
+     * @param {Number|String} opts.currentPage   当前页
+     * @param {String} opts.buildingName     建筑名字
+     * @param {String} opts.buildingId       建筑id
+     * @param {String} opts.buildingType     建筑类型
+     * @param {Function} cbSuccess 回调函数--成功
+     * @param {Function} cbFail    回调函数--失败
+     *
+     * @author dz-Drbeo-20180427
+     */
+    getBuildingListBySearch: function (opts, cbSuccess, cbFail) {
+        // console.log('api-getSchoolListBySearch:' + JSON.stringify(opts))
+        axios({
+            method: 'post',
+            url: '/v1/generatedata/getbuildinglist',
+            responseType: 'json',
+            data: qs.stringify({
+                currentPage: opts.currentPage,
+                pageSize: opts.pageSize,
+                buildingName: opts.buildingName,
+                buildingId: opts.buildingId,
+                buildingType: opts.buildingType
+            })
+        })
+        .then(function (response) {
+            if (response.status === 200 && response.data.success) {
+                // response.data.content.pager.currentPage = parseInt(response.data.content.pager.currentPage, 10) + 1 // TODO-MOCK
+                setTimeout(() => {
+                    // TODO -- MOCK SERVER waiting
+                    cbSuccess(response)
+                }, 1500)
+            } else if (typeof cbFail === 'function') {
+                cbFail(response)
+            }
+        })
+        .catch(function (error) {
+            if (typeof cbFail === 'function') {
+                cbFail(error)
+            }
+        })
+    },
+    /**
+     * 通过搜索,获取房间列表.
+     *
+     * @param {Object} opts
+     * @param {Number|String} opts.pageSize 每页size
+     * @param {Number|String} opts.currentPage   当前页
+     * @param {String} opts.roomName     房间名字
+     * @param {String} opts.roomId       房间号
+     * @param {String} opts.roomType     房间类型
+     * @param {Function} cbSuccess 回调函数--成功
+     * @param {Function} cbFail    回调函数--失败
+     *
+     * @author dz-Drbeo-20180427
+     */
+    getRoomListBySearch: function (opts, cbSuccess, cbFail) {
+        // console.log('api-getSchoolListBySearch:' + JSON.stringify(opts))
+        axios({
+            method: 'post',
+            url: '/v1/generatedata/getroomlist',
+            responseType: 'json',
+            data: qs.stringify({
+                currentPage: opts.currentPage,
+                pageSize: opts.pageSize,
+                roomName: opts.roomName,
+                roomId: opts.roomId,
+                roomType: opts.roomType,
+                buildingId: opts.buildingId
+            })
+        })
+        .then(function (response) {
+            if (response.status === 200 && response.data.success) {
+                // response.data.content.pager.currentPage = parseInt(response.data.content.pager.currentPage, 10) + 1 // TODO-MOCK
+                setTimeout(() => {
+                    // TODO -- MOCK SERVER waiting
+                    cbSuccess(response)
+                }, 1500)
+            } else if (typeof cbFail === 'function') {
+                cbFail(response)
+            }
+        })
+        .catch(function (error) {
+            if (typeof cbFail === 'function') {
+                cbFail(error)
+            }
+        })
+    },
+    /**
+     * 新增学校
+     *
+     * @param {Object} opts
+     * @param {function} cbSuccess 回调函数--成功
+     * @param {function} cbFail    回调函数--失败
+     *
+     */
+    addSchool: function (opts, cbSuccess, cbFail) {
+        axios({
+            method: 'post',
+            url: '/area/add-school-account.json',
+            responseType: 'json',
+            params: qs.stringify({})
+        })
+        .then(function (response) {
+            if (response.status === 200 && response.data.success) {
+                setTimeout(() => {
+                    // TODO -- MOCK SERVER waiting
+                    cbSuccess(response)
+                }, 1500)
+            } else if (typeof cbFail === 'function') {
+                cbFail(response)
+            }
+        })
+        .catch(function (error) {
+            if (typeof cbFail === 'function') {
+                cbFail(error)
+            }
+        })
+    },
+    /**
+     * 获取教职工获奖人列表
+     *
+     * @param {Object} opts 入参
+     * @param {Number|String} opts.pageSize 每页size
+     * @param {Number|String} opts.currentPage   当前页
+     * @param {String} opts.rewardsName     获奖人姓名
+     * @param {String} opts.schoolName      获奖人学校名
+     * @param {String} opts.rewardLevel     获奖等级
+     *
+     */
+    getRewardsTeacherListBySearch: function (opts, cbSuccess, cbFail) {
+        // console.log('api-getSchoolListBySearch:' + JSON.stringify(opts))
+        axios({
+            method: 'post',
+            url: '/v1/teacher-award/index',
+            responseType: 'json',
+            data: qs.stringify({
+                currentPage: opts.currentPage,
+                pageSize: opts.pageSize,
+                RewardsName: opts.rewardsName,
+                schoolName: opts.schoolName,
+                rewardLevel: opts.rewardLevel
+            })
+        })
+        .then(function (response) {
+            if (response.status === 200 && response.data.success) {
+                // response.data.content.pager.currentPage = parseInt(response.data.content.pager.currentPage, 10) + 1 // TODO-MOCK
+                setTimeout(() => {
+                    // TODO -- MOCK SERVER waiting
+                    cbSuccess(response)
+                }, 1500)
+            } else if (typeof cbFail === 'function') {
+                cbFail(response)
+            }
+        })
+        .catch(function (error) {
+            if (typeof cbFail === 'function') {
+                cbFail(error)
+            }
+        })
+    },
+    /**
+     * 获取获奖教师信息
+     *
+     * @param {Object} opts
+     * @param {function} cbSuccess 回调函数--成功
+     * @param {function} cbFail    回调函数--失败
+     *
+     */
+    getRewardsTeacherInfo: function (opts, cbSuccess, cbFail) {
+        axios({
+            method: 'post',
+            url: '/area/get-rewards-info.json',
+            responseType: 'json',
+            params: qs.stringify({
+                id: opts.id
+            })
+        })
+        .then(function (response) {
+            if (response.status === 200 && response.data.success) {
+                setTimeout(() => {
+                    // TODO -- MOCK SERVER waiting
+                    cbSuccess(response)
+                }, 1500)
+            } else if (typeof cbFail === 'function') {
+                cbFail(response)
+            }
+        })
+        .catch(function (error) {
+            if (typeof cbFail === 'function') {
+                cbFail(error)
+            }
+        })
+    },
+    /**
+     * 获取学生家长信息列表
+     *
+     * @param {Object} opts 请求参数
+     * @param {function} cbSuccess 回调函数--成功
+     * @param {function} cbFail    回调函数--失败
+     * @param {Array} opts.schoolNumber 输入学号
+     * @param {String} opts.name 输入学生的姓名
+     * @param {String} opts.name 输入学生的姓名
+     * @param {number} opts.gradeId 选择年级ID
+     * @param {number} opts.currentPage 学生列表的页数
+     *
+     */
+    putStudentInfoList: function (opts, cbSuccess, cbFail) {
+        axios({
+            method: 'post',
+            url: '/v1/student/index',
+            responseType: 'json',
+            data: qs.stringify({
+                name: opts.name,
+                schoolNumber: opts.schoolNumber,
+                gradeId: opts.gradeId,
+                schoolId: opts.schoolId,
+                currentPage: opts.currentPage
+            })
+        })
+        .then(function (response) {
+         /*   if (response.status === 200 && response.data.code === 0) {
+                response.data.data.currentPage =
+                    parseInt(response.data.data.currentPage, 10) + 1 // TODO-MOCK
+                setTimeout(() => {
+                    // TODO -- MOCK SERVER waiting
+                    cbSuccess(response)
+                }, 1500)
+            } else if (typeof cbFail === 'function') {
+                cbFail(response)
+            } */
+            cbSuccess(response)
+        })
+        .catch(function (error) {
+            if (typeof cbFail === 'function') {
+                cbFail(error)
+            }
+        })
+    },
+
+    /**
+     * 获取教师信息列表
+     *
+     * @param {Object} opts 请求参数
+     * @param {function} cbSuccess 回调函数--成功
+     * @param {function} cbFail    回调函数--失败
+     * @param {Array} opts.schoolId 选择的学校ID
+     * @param {String} opts.name 选择教师的姓名
+     * @param {String} opts.job 选择教师的职务
+     * @param {String} opts.course 选择教师的任教科目
+     * @param {number} opts.currentPage 教师列表的页数
+     *
+     */
+    putTeacherInfoList: function (opts, cbSuccess, cbFail) {
+        axios({
+            method: 'post',
+            url: '/v1/teacher/index',
+            responseType: 'json',
+            data: qs.stringify({
+                name: opts.name,
+                job: opts.job,
+                course: opts.course,
+                schoolId: opts.schoolId,
+                currentPage: opts.currentPage
+            })
+        })
+            .then(function (response) {
+                /*   if (response.status === 200 && response.data.code === 0) {
+                       response.data.data.pageNo =
+                           parseInt(response.data.data.pageNo, 10) + 1 // TODO-MOCK
+                       setTimeout(() => {
+                           // TODO -- MOCK SERVER waiting
+                           cbSuccess(response)
+                       }, 1500)
+                   } else if (typeof cbFail === 'function') {
+                       cbFail(response)
+                   } */
+                cbSuccess(response)
+            })
+            .catch(function (error) {
+                if (typeof cbFail === 'function') {
+                    cbFail(error)
+                }
+            })
+    },
+    /**
+     * 获取学生成绩管理列表
+     *
+     * @param {Object} opts 请求参数
+     * @param {function} cbSuccess 回调函数--成功
+     * @param {function} cbFail    回调函数--失败
+     * @param {Array} opts.schoolId 选择的学校ID
+     * @param {String} opts.name 输入学生的姓名
+     * @param {String} opts.term 输入学期
+     * @param {String} opts.exam 输入考试
+     * @param {number} opts.gradeId 选择年级
+     * @param {number} opts.currentPage 教师列表的页数
+     *
+     */
+    putGradeManageList: function (opts, cbSuccess, cbFail) {
+        axios({
+            method: 'post',
+            url: '/v1/score/index',
+            responseType: 'json',
+            data: qs.stringify({
+                name: opts.name,
+                term: opts.term,
+                exam: opts.exam,
+                gradeId: opts.gradeId,
+                schoolId: opts.schoolId,
+                currentPage: opts.currentPage
+            })
+        })
+            .then(function (response) {
+                /*   if (response.status === 200 && response.data.code === 0) {
+                       response.data.data.pageNo =
+                           parseInt(response.data.data.pageNo, 10) + 1 // TODO-MOCK
+                       setTimeout(() => {
+                           // TODO -- MOCK SERVER waiting
+                           cbSuccess(response)
+                       }, 1500)
+                   } else if (typeof cbFail === 'function') {
+                       cbFail(response)
+                   } */
+                cbSuccess(response)
+            })
+            .catch(function (error) {
+                if (typeof cbFail === 'function') {
+                    cbFail(error)
+                }
+            })
+    },
+    /**
+     * 获取学校列表
+     * @param {function} cbSuccess 回调函数--成功
+     * @param {function} cbFail    回调函数--失败
+     */
+    getSchoolList: function (cbSuccess, cbFail) {
+        axios({
+            method: 'get',
+            url: '/v1/generatedata/getshoollist',
+            responseType: 'json'
+        }).then(function (response) {
+           /* if (response.status === 200 && response.data.code === 0) {
+                response.data.data.currentPage =
+                    parseInt(response.data.data.currentPage, 10) + 1 // TODO-MOCK
+                setTimeout(() => {
+                    // TODO -- MOCK SERVER waiting
+                    cbSuccess(response)
+                }, 1500)
+            } else if (typeof cbFail === 'function') {
+                cbFail(response)
+            } */
+            cbSuccess(response)
+        }).catch(function (error) {
+            if (typeof cbFail === 'function') {
+                cbFail(error)
+            }
+        })
+    },
+
+    /**
+     * 通过搜索,获取体制健康列表.
+     *
+     * @param {Object} opts
+     * @param {Number|String} opts.pageSize 每页size
+     * @param {Number|String} opts.currentPage   当前页
+     * @param {String} opts.studentName     学生名字
+     * @param {String} opts.studentId       学生id
+     * @param {Function} cbSuccess 回调函数--成功
+     * @param {Function} cbFail    回调函数--失败
+     *
+     * @author dz-lixioying-20180428
+     */
+    physicalAllListBySearch: function (opts, cbSuccess, cbFail) {
+        // console.log('api-getSchoolListBySearch:' + JSON.stringify(opts))
+        axios({
+            method: 'post',
+            url: '/v1/physique/index',
+            responseType: 'json',
+            data: qs.stringify({
+                currentPage: opts.currentPage,
+                pageSize: opts.pageSize,
+                studentName: opts.studentName,
+                studentId: opts.studentId
+            })
+        })
+        .then(function (response) {
+            if (response.status === 200 && response.data.success) {
+                // response.data.data.currentPage = parseInt(response.data.content.pager.currentPage, 10) + 1 // TODO-MOCK
+                // setTimeout(() => {
+                //     // TODO -- MOCK SERVER waiting
+                    cbSuccess(response)
+                // }, 1500)
+            } else if (typeof cbFail === 'function') {
+                cbFail(response)
+            }
+        })
+        .catch(function (error) {
+            if (typeof cbFail === 'function') {
+                cbFail(error)
+            }
+        })
+    },
+
+    /**
+     * 通过搜索,获取控辍保学列表.
+     *
+     * @param {Object} opts 请求参数
+     * @param {Number|String} opts.pageSize 每页size
+     * @param {Number|String} opts.currentPage   当前页
+     * @param {String} opts.studentName     学生名字
+     * @param {String} opts.studentId       学生id
+     * @param {String} opts.schoolId        学校id
+     * @param {Boolean} opts.isBackSchool   是否返校1 是 0 否
+     * @param {Function} cbSuccess 回调函数--成功
+     * @param {Function} cbFail    回调函数--失败
+     *
+     * @author dz-lixioying-20180428
+     */
+    dropoutListBySearch: function (opts, cbSuccess, cbFail) {
+        // console.log('api-getSchoolListBySearch:' + JSON.stringify(opts))
+        axios({
+            method: 'post',
+            url: '/v1/dropout/index',
+            responseType: 'json',
+            data: qs.stringify({
+                currentPage: opts.currentPage,
+                pageSize: opts.pageSize,
+                studentName: opts.studentName,
+                studentId: opts.studentId,
+                schoolId: opts.schoolId,
+                isBackSchool: opts.isBackSchool
+            })
+        })
+        .then(function (response) {
+            if (response.status === 200 && response.data.success) {
+                // console.log(response)
+                // response.data.data.currentPage = parseInt(response.data.content.pager.currentPage, 10) + 1 // TODO-MOCK
+                setTimeout(() => {
+                    // TODO -- MOCK SERVER waiting
+                    cbSuccess(response)
+                }, 1500)
+            } else if (typeof cbFail === 'function') {
+                cbFail(response)
+            }
+        })
+        .catch(function (error) {
+            if (typeof cbFail === 'function') {
+                cbFail(error)
+            }
+        })
+    },
+    /**
+     * 获取教职工惩罚列表
+     *
+     * @param {Object} opts 入参
+     * @param {Number|String} opts.pageSize 每页size
+     * @param {Number|String} opts.currentPage   当前页
+     * @param {String} opts.rewardsName     获奖人姓名
+     * @param {String} opts.schoolName      获奖人学校名
+     * @param {String} opts.rewardLevel     获奖等级
+     *
+     */
+    getPunishmentTeacherListBySearch: function (opts, cbSuccess, cbFail) {
+        // console.log('api-getSchoolListBySearch:' + JSON.stringify(opts))
+        axios({
+            method: 'post',
+            url: '/v1/teacher-punishment/index',
+            responseType: 'json',
+            data: qs.stringify({
+                currentPage: opts.currentPage,
+                pageSize: opts.pageSize,
+                punishmentName: opts.punishmentName,
+                schoolName: opts.schoolName,
+                rewardLevel: opts.rewardLevel
+            })
+        })
+            .then(function (response) {
+                if (response.status === 200 && response.data.success) {
+                    // response.data.content.pager.currentPage = parseInt(response.data.content.pager.currentPage, 10) + 1 // TODO-MOCK
+                    setTimeout(() => {
+                        // TODO -- MOCK SERVER waiting
+                        cbSuccess(response)
+                    }, 1500)
+                } else if (typeof cbFail === 'function') {
+                    cbFail(response)
+                }
+            })
+            .catch(function (error) {
+                if (typeof cbFail === 'function') {
+                    cbFail(error)
+                }
+            })
+    },
+    /**
+     * 获取学生获奖人列表
+     *
+     * @param {Object} opts 入参
+     * @param {Number|String} opts.pageSize 每页size
+     * @param {Number|String} opts.currentPage   当前页
+     * @param {String} opts.rewardsName     获奖人姓名
+     * @param {String} opts.schoolName      获奖人学校名
+     * @param {String} opts.rewardLevel     获奖等级
+     *
+     */
+    getRewardsStudentListBySearch: function (opts, cbSuccess, cbFail) {
+        // console.log('api-getSchoolListBySearch:' + JSON.stringify(opts))
+        axios({
+            method: 'post',
+            url: '/v1/student-award/index',
+            responseType: 'json',
+            data: qs.stringify({
+                currentPage: opts.currentPage,
+                pageSize: opts.pageSize,
+                RewardsName: opts.rewardsName,
+                schoolName: opts.schoolName,
+                rewardLevel: opts.rewardLevel
+            })
+        })
+            .then(function (response) {
+                if (response.status === 200 && response.data.success) {
+                    // response.data.content.pager.currentPage = parseInt(response.data.content.pager.currentPage, 10) + 1 // TODO-MOCK
+                    setTimeout(() => {
+                        // TODO -- MOCK SERVER waiting
+                        cbSuccess(response)
+                    }, 1500)
+                } else if (typeof cbFail === 'function') {
+                    cbFail(response)
+                }
+            })
+            .catch(function (error) {
+                if (typeof cbFail === 'function') {
+                    cbFail(error)
+                }
+            })
+    },
+    /**
+     * 获取学生惩罚列表
+     *
+     * @param {Object} opts 入参
+     * @param {Number|String} opts.pageSize 每页size
+     * @param {Number|String} opts.currentPage   当前页
+     * @param {String} opts.rewardsName     获奖人姓名
+     * @param {String} opts.schoolName      获奖人学校名
+     * @param {String} opts.rewardLevel     获奖等级
+     *
+     */
+    getPunishmentStudentListBySearch: function (opts, cbSuccess, cbFail) {
+        // console.log('api-getSchoolListBySearch:' + JSON.stringify(opts))
+        axios({
+            method: 'post',
+            url: '/v1/student-punish/index',
+            responseType: 'json',
+            data: qs.stringify({
+                currentPage: opts.currentPage,
+                pageSize: opts.pageSize,
+                RewardsName: opts.rewardsName,
+                schoolName: opts.schoolName,
+                rewardLevel: opts.rewardLevel
+            })
+        })
+            .then(function (response) {
+                if (response.status === 200 && response.data.success) {
+                    // response.data.content.pager.currentPage = parseInt(response.data.content.pager.currentPage, 10) + 1 // TODO-MOCK
+                    setTimeout(() => {
+                        // TODO -- MOCK SERVER waiting
+                        cbSuccess(response)
+                    }, 1500)
+                } else if (typeof cbFail === 'function') {
+                    cbFail(response)
+                }
+            })
+            .catch(function (error) {
+                if (typeof cbFail === 'function') {
+                    cbFail(error)
+                }
+            })
+    }
+}
